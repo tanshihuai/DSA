@@ -6,19 +6,21 @@ class TreeNode:
 
 
 newBT = TreeNode(5)
-newNode1 = TreeNode(7)
-newNode2 = TreeNode(4)
-newNode3 = TreeNode(2)
-newNode4 = TreeNode(1)
-newNode5 = TreeNode(3)
+newNode3 = TreeNode(3)
 newNode6 = TreeNode(6)
+newNode2 = TreeNode(2)
+newNode4 = TreeNode(4)
+newNode8 = TreeNode(8)
+newNode1 = TreeNode(1)
+newNode7 = TreeNode(7)
 
-newBT.left = newNode1
-newBT.right = newNode2
-newNode1.left = newNode3
-newNode1.right = newNode4
-newNode2.left = newNode5
-newNode2.right = newNode6
+newBT.left = newNode3
+newBT.right = newNode6
+newNode3.left = newNode2
+newNode3.right = newNode4
+newNode2.left = newNode1
+newNode6.right = newNode8
+newNode8.left = newNode7
 
 
 class queue():
@@ -91,10 +93,31 @@ def lltolist(root):
                 next_level.append(i.right)
         ans.extend([current_level_value])
         level = next_level
-    real_ans = [max(i) for i in ans]
-    return real_ans
+    return ans
 
 
-print(lltolist(newBT))
+
+
+
+def validate_tree(root):
+    if root.left:
+        if root.left.data > root.data:
+            return False
+        return validate_tree(root.left)
+    if root.right:
+        if root.right.data < root.data:
+            return False
+        return validate_tree(root.right)
+    return True
+
+print(validate_tree(newBT))
+
+
+
+
+
+
+
+
 
 
