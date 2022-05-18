@@ -79,44 +79,6 @@ def levelOrderTraversal(root):
             q.enqueue(node.right)
 
 
-def lltolist(root):
-    ans = []
-    level = [root]
-    while root and level:
-        next_level = []
-        current_level_value = []
-        for i in level:
-            current_level_value.append(i.data)
-            if i.left:
-                next_level.append(i.left)
-            if i.right:
-                next_level.append(i.right)
-        ans.extend([current_level_value])
-        level = next_level
-    return ans
-
-
-
-
-
-def validate_tree(root):
-    if root.left:
-        if root.left.data > root.data:
-            return False
-        return validate_tree(root.left)
-    if root.right:
-        if root.right.data < root.data:
-            return False
-        return validate_tree(root.right)
-    return True
-
-print(validate_tree(newBT))
-
-
-
-
-
-
 
 
 
