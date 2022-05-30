@@ -24,12 +24,6 @@ class Solution(object):
 
 
 
-
-
-
-
-
-
 haystack = "aaa"
 needle = "v"
 s = Solution()
