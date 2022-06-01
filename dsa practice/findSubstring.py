@@ -28,3 +28,4 @@ haystack = "aaa"
 needle = "v"
 s = Solution()
 print(s.strStr(haystack, needle))
+
