@@ -15,8 +15,6 @@ class Solution(object):
                     memo[i][j] = memo[i+1][j+1] + 1
                 else:
                     memo[i][j] = max(memo[i][j+1], memo[i+1][j])
-        for i in memo:
-            print(i)
         return memo[0][0]
 
 t1 = "abcde"
