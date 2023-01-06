@@ -1,9 +1,6 @@
 class Solution(object):
     def rob(self, nums):
-        """
-        :type nums: List[int]
-        :rtype: int
-        """
+        '''O(n) space complexity because store all values in memo array'''
         memo = [0] * (len(nums) + 3)
         nums.append(0)
 
@@ -12,7 +9,16 @@ class Solution(object):
         print(memo)
         return memo[0]
 
+    def improvedRob(self,nums):
+        '''O(1) space complexity because store only needed varaibles'''
+        prev1 = prev2 = maxRob = 0
+        for i in range(len(nums)):
+            maxRob = max(prev1, prev2 + nums[i])
+            prev2 = prev1
+            prev1 = maxRob
+        return maxRob
+
 
 nums = [1,2,3,1]
 s=Solution()
-print(s.rob(nums))
+print(s.improvedRob(nums))
