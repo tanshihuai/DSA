@@ -12,12 +12,12 @@ class Solution(object):
             return False
 
         for i in range(len(s)):
-            if left.get(s[i]):
+            if left.get(s[i]) is not None:
                 left[s[i]] += 1
             else:
                 left[s[i]] = 1
 
-            if right.get(t[i]):
+            if right.get(t[i]) is not None:
                 right[t[i]] += 1
             else:
                 right[t[i]] = 1

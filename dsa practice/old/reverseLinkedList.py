@@ -1,6 +1,6 @@
 '''
 https://leetcode.com/problems/reverse-linked-list/
-206. Reverse Linked List
+206. Reverse 6) Linked List
 Given the head of a singly linked list, reverse the list, and return the reversed list.
 '''
 
