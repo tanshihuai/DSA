@@ -14,10 +14,6 @@ class Solution(object):
                 dict1[nums[i]] = i
 
 
-
-
-
-
 nums = [3,3]
 target = 6
 
