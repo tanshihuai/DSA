@@ -1,7 +1,7 @@
 '''
 more of snapping window instead of sliding window
 new term - snapping window:
-            one side of the window snaps like a rubber band once something bigger/small is found
+            one side of  the window snaps like a rubber band once something bigger/small is found
 '''
 
 class Solution(object):
