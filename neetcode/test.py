@@ -1,3 +1,2 @@
 x = []
-while x:
-    print("it is false")
+print(x[-1])
