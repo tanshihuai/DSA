@@ -1,2 +1,2 @@
-x = []
-print(x[-1])
+for i in range(97, 122):
+      print(chr(i))
